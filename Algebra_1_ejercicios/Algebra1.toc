@@ -1,0 +1,25 @@
+\babel@toc {spanish}{}
+\contentsline {section}{\numberline {1}Conjuntos}{3}{section.1}% 
+\contentsline {subsection}{\numberline {1.1}Ejercicios Conjuntos Primera Parte}{3}{subsection.1.1}% 
+\contentsline {subsection}{\numberline {1.2}Ejercicios Sobre relaciones }{16}{subsection.1.2}% 
+\contentsline {section}{\numberline {2}Funciones}{18}{section.2}% 
+\contentsline {subsection}{\numberline {2.1}Ejercicios de Funciones}{18}{subsection.2.1}% 
+\contentsline {section}{\numberline {3}N\IeC {\'u}meros Naturales}{20}{section.3}% 
+\contentsline {subsection}{\numberline {3.1}\IeC {\textquestiondown }Qu\IeC {\'e} son los n\IeC {\'u}meros naturales ($\mathbb {N}$)?}{20}{subsection.3.1}% 
+\contentsline {subsection}{\numberline {3.2}La suma de Gauss y la serie Geom\IeC {\'e}trica}{20}{subsection.3.2}% 
+\contentsline {subsubsection}{\numberline {3.2.1}La suma de Gauss}{20}{subsubsection.3.2.1}% 
+\contentsline {subsubsection}{\numberline {3.2.2}La serie Geom\IeC {\'e}trica}{20}{subsubsection.3.2.2}% 
+\contentsline {subsection}{\numberline {3.3}Sumatoria }{20}{subsection.3.3}% 
+\contentsline {subsection}{\numberline {3.4}Productoria}{21}{subsection.3.4}% 
+\contentsline {subsection}{\numberline {3.5}El conjunto inductivo $\mathbb {N}$ y el principio de inducci\IeC {\'o}n}{21}{subsection.3.5}% 
+\contentsline {subsection}{\numberline {3.6}Inducci\IeC {\'o}n Completa}{21}{subsection.3.6}% 
+\contentsline {subsection}{\numberline {3.7}Sucesi\IeC {\'o}n de Fibonacci}{22}{subsection.3.7}% 
+\contentsline {subsection}{\numberline {3.8}Sucesi\IeC {\'o}n de Lucas}{22}{subsection.3.8}% 
+\contentsline {subsection}{\numberline {3.9}Inducci\IeC {\'o}n Completa}{23}{subsection.3.9}% 
+\contentsline {subsection}{\numberline {3.10}Ejercicios Sobre Numeros Naturales}{23}{subsection.3.10}% 
+\contentsline {section}{\numberline {4}Combinatoria}{26}{section.4}% 
+\contentsline {subsection}{\numberline {4.1}Cardinal}{26}{subsection.4.1}% 
+\contentsline {subsection}{\numberline {4.2}Cantidad de relaciones y funciones}{26}{subsection.4.2}% 
+\contentsline {subsection}{\numberline {4.3}Ejercicios Sobre Combinatoria }{27}{subsection.4.3}% 
+\contentsline {subsection}{\numberline {4.4}Ejercicios de las clases}{30}{subsection.4.4}% 
+\contentsline {section}{\numberline {5}Referencias}{30}{section.5}% 

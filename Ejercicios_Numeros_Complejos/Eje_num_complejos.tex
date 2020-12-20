@@ -1,0 +1,138 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	    REFERENCIAS       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% http://www.latextemplates.com/
+% https://es.wikibooks.org/wiki/Manual_de_LaTeX/Inclusi%C3%B3n_de_gr%C3%A1ficos/Gr%C3%A1ficos_con_TikZ
+% https://tex.stackexchange.com/questions/105570/how-to-plot-functions-like-x-fy-using-tikz
+% https://ondahostil.wordpress.com/2017/05/17/lo-que-he-aprendido-cuadros-de-texto-de-colores-en-latex/
+% https://es.overleaf.com/learn/latex/Articles%2FMathtools_-_for_beautiful_math
+\documentclass[10pt]{article}
+
+\usepackage[lmargin=2cm, rmargin=2cm, top=1.5cm, bottom=1.5cm]{geometry}
+\usepackage{longtable,multirow,booktabs}
+\usepackage{mathrsfs} % para formato de letra
+\usepackage[spanish,es-tabla]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{newcent}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\graphicspath{imagenes}
+\usepackage{hyperref}
+\usepackage{cancel}
+
+\usepackage{tcolorbox}
+\tcbuselibrary{listingsutf8}
+
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.15}
+\usetikzlibrary{arrows}
+\usetikzlibrary{datavisualization}
+\usetikzlibrary{decorations.markings}
+\renewcommand{\baselinestretch}{1.1}
+
+\newtcolorbox[auto counter, number within=section]{problema}[2][]
+{colback=red!7!white,colframe=red!50!black,
+fonttitle=\bfseries, title=Problema~\thetcbcounter: #2,#1}
+
+
+\input{variables.tex}
+
+
+
+
+%%%%%%%%%%%%%%%%%%
+%	 TITULO      %
+%%%%%%%%%%%%%%%%%%
+\title{\bfseries \huge {Ejercicios Sobre Números Complejos}}
+\author{Ezequiel Remus}
+\date{}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%						Inicio del documento                   %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\renewcommand{\tablename}{Tabla}
+%\pagestyle{myheadings}
+%TITULO
+%modificar el formato del titulo
+\maketitle
+\newpage
+
+\tableofcontents
+\newpage
+%-------------------------------------------------------------------------%
+\begin{problema}{}
+Sea $w \in G_{68}^*$. Hallar $n \in \entero{}$ /
+\[w^{13n+33} + \sum_{l=0}^{67}w^{4l} = w^{17} + w^{34} + w^{51}\]
+\end{problema}
+
+
+\underline{\verde{Solución}:}
+
+Como $w \in G_{68}^*$, se que $w^68 = 1$ y que cualquier otra potencia $k$ de $w$ tal que $k \not\vert 68$ nos va a dar que $w^k \neq 1$, $\forall k$.
+
+Recordando la serie geometrica. Notemos que: 
+\[\sum_{l=0}^{67}w^{4l} \underbrace{=}_{w^k \neq 1} \frac{{w^{68}}^4 - 1}{w^4 - 1} \underbrace{=}_{w^{68} = 1} \frac{1-1}{w^4 - 1} = 0\]
+Entonces, nos queda esto:
+\[w^{13n+33}  = w^{17} + w^{34} + w^{51}\]
+Por otro lado, notemos que $34 = 2 \cdot 17$ y $51 = 3 \cdot 17$. Por lo que podemos escribir lo siguiente:
+\[w^{17} + w^{34} + w^{51} = ({w^{17}})^1 + ({w^{17}})^2 + ({w^{17}})^3 = \sum_{i=1}^{3} = \sum_{i=0}^{3}w^{17i} - \sum_{i=0}^{0}w^{17i} = \]
+\[= \sum_{i=0}^{3}w^{17i} - 1 \underbrace{=}_{w^{17} \neq 1} \frac{({w^{17}})^4 - 1}{w^17 - 1} - 1 = \frac{(w^{68} - 1)}{w^17 - 1} - 1 \underbrace{=}_{w^{68} = 1} -1\]
+Luego, nos queda entonces que:
+\[w^{13n+33} = -1 \]
+Observemos que:
+
+\begin{itemize}
+ \item Sabemos que hay solución, pues $-1 \in G_{68}^* 
+$ y $w$ genera todo  $G_{68}$.
+
+\item Sabemos que $\exists !$ solucion $k \in \entero{}$ $ : $ $ 0 \mayig k \mayig 67$ y $w^k = -1$. 
+
+\item Además, si  $w^k = -1$ y $w^j = -1$, entonces $\congruente{k}{j}{68}$
+
+\item $w \in G_{68}^*$, por simetria sabemos que, como $w^0 = 1$ y $w^{68} = 1$ $\implica$ $w^{34} = -1$
+\end{itemize}
+
+Entonces, si encontramos una solución las encontramos a todas!.
+
+Luego, pedimos que :
+\[\congruente{13n +33}{34}{68}\]
+Como $68 = 2 \cdot 2 \cdot 17$, podemos dividir esa ecuación de congruencia en:
+\[\left\lbrace
+ \congruente{13n +33}{34}{2} \implica \congruente{n + 1}{0}{2} \implica \congruente{n }{-1}{2} \implica \rojo{\congruente{n}{1}{2}} \atop
+ \congruente{13n +33}{34}{17} \implica \congruente{13n -1}{0}{17}
+ \implica \congruente{13n}{1}{17} \xrightarrow{(13:17)=1} \congruente{4 \cdot 13n }{4 \cdot 1}{17} \implica 
+ \rojo{\congruente{n}{4}{17}}
+ \right.
+\]
+Nos queda entonces el siguiente sistema de congruencias:
+\[\left\lbrace
+  \congruente{n}{4}{17} \atop
+  \congruente{n}{1}{2} \xrightarrow{} n = 2k +1
+ \right.
+\]
+Reemplazo en la primer ecuación:
+\[\congruente{2k +1}{4}{17} \xrightarrow{(2:17)=1} \congruente{9\cdot 2k + 9}{ 9 \cdot  4}{17} \implica 
+\congruente{18k + 9}{36}{17} \implica
+\congruente{k }{2-9}{17} \implica
+\congruente{k }{-7}{17} \implica \rojo{\congruente{k }{10}{17}}\]
+Nos queda entonces que: $n = 2k +1 = 2(17\cdot q + 10) +1 = 34 q + 21$ $\implica$ \rojo{$\congruente{n}{21}{34}$}
+%-------------------------------------------------------------------------%
+\begin{problema}{}
+ Hallar $n \in \nat{}$ / 
+ \[\sum_{i=2}^{n-1} w^{3i} = 0\]
+Donde $w \in G_{15}^*$
+ \end{problema}
+%-------------------------------------------------------------------------%
+\begin{problema}{}
+ Hallar $n \in \nat{}$ / \hspace{0.2cm} $w^{5n} = w^3$; $w \in G_{15}^9$
+\end{problema}
+%-------------------------------------------------------------------------%
+\end{document}

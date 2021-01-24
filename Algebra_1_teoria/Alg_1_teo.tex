@@ -34,7 +34,7 @@
 %	 Variables    %
 %%%%%%%%%%%%%%%%%%%
 \input{variables.tex}
-
+\newcommand{\nat}[1]{\mathbb{N}^{#1}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %						Inicio del documento                   %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -990,7 +990,7 @@ Si $a, b \in \entero{}$ no ambos nulos,  y sea $d \in \entero{}$, con $d \neq 0$
   $d = s a + t b$
   \item $\divi{d}{a}$, $\divi{d}{b}$ y si $\divi{c}{b}$, entonces $\divi{c}{d}$
  \end{enumerate}
-Un numero $d \in \natural{}$ que cumple cualquiera de esas $3$ propiedades es el máximo comun divisor $(a:b)$.
+Un numero $d \in \nat{}$ que cumple cualquiera de esas $3$ propiedades es el máximo comun divisor $(a:b)$.
 \end{teo}
 
 
@@ -1057,8 +1057,8 @@ Existen infinitos primos positivos distintos.
 \begin{obs}{Primos de productos y potencias}
 Sean $a,b \in \entero{}$ no nulos de la forma 
 \begin{center}
- $a = \pm p_1^{m_1} \cdot \pm p_2^{m_2} \cdots \pm p_r^{m_r}$, con $m_i \in \natural{}_0$
- $b = \pm p_1^{n_1} \cdot \pm p_2^{n_2} \cdots \pm p_r^{n_r}$, con $n_i \in \natural{}_0$
+ $a = \pm p_1^{m_1} \cdot \pm p_2^{m_2} \cdots \pm p_r^{m_r}$, con $m_i \in \nat{}_0$
+ $b = \pm p_1^{n_1} \cdot \pm p_2^{n_2} \cdots \pm p_r^{n_r}$, con $n_i \in \nat{}_0$
  \end{center}
  Entonces:
  \begin{itemize}
@@ -1080,15 +1080,15 @@ Sean $a,b \in \entero{}$ no nulos de la forma
 \end{propo}
 
 \begin{propo}{Divisores y Potencias}
- Sean $a,d \in \entero{}$ con $d$ no nulo, y sea $n \in \natural{}$. Entonces:
+ Sean $a,d \in \entero{}$ con $d$ no nulo, y sea $n \in \nat{}$. Entonces:
  \[\divi{d}{a} \sii \divi{d^n}{a^n}\]
 \end{propo}
 
 \begin{propo}{MCD y factorización}
 Sean $a, b \in \entero{}$ no nulos de la forma:
 \begin{center}
- $a = \pm p_1^{m_1} \cdot \pm p_2^{m_2} \cdots \pm p_r^{m_r}$, con $m_i \in \natural{}_0$
- $b = \pm p_1^{n_1} \cdot \pm p_2^{n_2} \cdots \pm p_r^{n_r}$, con $n_i \in \natural{}_0$
+ $a = \pm p_1^{m_1} \cdot \pm p_2^{m_2} \cdots \pm p_r^{m_r}$, con $m_i \in \nat{}_0$
+ $b = \pm p_1^{n_1} \cdot \pm p_2^{n_2} \cdots \pm p_r^{n_r}$, con $n_i \in \nat{}_0$
  \end{center}
   Entonces
   \[(a:b) = p_1^{min\{m_1, n_1\}} \cdot p_2^{min\{m_2, n_2\}} \cdots  p_r^{min\{m_r, n_r\}}\]
@@ -1097,12 +1097,12 @@ Sean $a, b \in \entero{}$ no nulos de la forma:
 \begin{cor}{MCD de potencias}
 Sean $a, b \in \entero{}$ no nulos.
 \begin{enumerate}
- \item Seam $a,b \neq 0, \pm 1$, con su factorizacion en primos $a = \pm p_1^{m_1}  \cdots \pm p_r^{m_r}$, con $m_i \in \natural{}_0$
- $b = \pm q_1^{n_1}  \cdots \pm q_s^{n_s}$, con $n_i \in \natural{}_0$ entonces:
+ \item Seam $a,b \neq 0, \pm 1$, con su factorizacion en primos $a = \pm p_1^{m_1}  \cdots \pm p_r^{m_r}$, con $m_i \in \nat{}_0$
+ $b = \pm q_1^{n_1}  \cdots \pm q_s^{n_s}$, con $n_i \in \nat{}_0$ entonces:
  \[(a:b)=1 \es{0.2} \sii \es{0.2} p_i \neq q_i, \forall i, j\]
  \item $(a:b)=1$, $(a:c)=1$ $\sii$ $(a:bc)=1$
- \item $(a:b)=1$ $\sii$ $(a^m:b^n)=1$, $\forall m,n \in \natural{}$
- \item $(a^n: b^n) = (a:b)^n$, $n \in \natural{}$
+ \item $(a:b)=1$ $\sii$ $(a^m:b^n)=1$, $\forall m,n \in \nat{}$
+ \item $(a^n: b^n) = (a:b)^n$, $n \in \nat{}$
  \end{enumerate}
 \end{cor}
 
@@ -1113,8 +1113,8 @@ Sean $a, b \in \entero{}$ no nulos.
 \begin{propo}{mcm y factorizacion}
  Sean $a,b \in \entero{}$ no nulos de la forma
 \begin{center}
- $a = \pm p_1^{m_1} \cdot \pm p_2^{m_2} \cdots \pm p_r^{m_r}$, con $m_i \in \natural{}_0$
- $b = \pm p_1^{n_1} \cdot \pm p_2^{n_2} \cdots \pm p_r^{n_r}$, con $n_i \in \natural{}_0$
+ $a = \pm p_1^{m_1} \cdot \pm p_2^{m_2} \cdots \pm p_r^{m_r}$, con $m_i \in \nat{}_0$
+ $b = \pm p_1^{n_1} \cdot \pm p_2^{n_2} \cdots \pm p_r^{n_r}$, con $n_i \in \nat{}_0$
  \end{center}
  Entonces
  \[[a:b] = p_1^{max\{m_1,n_1\}} \cdots p_r^{max\{m_r,n_r\} }\]
@@ -1193,7 +1193,7 @@ tiene soluciones enteras $\forall c \in \entero{}$
 \end{defi}
 
 \begin{propo}{Ec. de Congruencia, mcd y ecuacion coprimizada}
- Sea $m \in \natural{}$. Dados $a,c \in \entero{}$, la ecuación de congruencia $\congruente{aX}{c}{m}$ tiene soluciones enteras $\sii$ $\divi{(a:m)}{c}$
+ Sea $m \in \nat{}$. Dados $a,c \in \entero{}$, la ecuación de congruencia $\congruente{aX}{c}{m}$ tiene soluciones enteras $\sii$ $\divi{(a:m)}{c}$
  
  Si ese es el caso, sean $a' = \cfrac{a}{(a:m)}$, $c' = \cfrac{c}{(a:m)}$, $m' = \cfrac{m}{(a:m)}$
 Entonces
@@ -1203,16 +1203,16 @@ Entonces
  \end{propo}
 
 \begin{obs}{Simplificando factores comunes en ecuaciónes de congruencia-I}
- Sean $m' \in \natural{}$ y $a',c',d \in \entero{}$ no nulos. Entonces
+ Sean $m' \in \nat{}$ y $a',c',d \in \entero{}$ no nulos. Entonces
  \[\forall x \in \entero{}, \congruente{(d a')x}{d c'}{d m'} \sii \congruente{a' x}{c'}{m'}\]
 \end{obs}
 
 \begin{cor}{Ecuación de congruencia con a y m coprimos}
- Sean $m \in \natural{}$ y $a \in \entero{}$ tal que $a$ y $m$ son coprimos. Entonces, la ecuación de congruencia $\congruente{aX}{c}{m}$ tiene soluciones enteras cualquiera sea $c \in \entero{}$
+ Sean $m \in \nat{}$ y $a \in \entero{}$ tal que $a$ y $m$ son coprimos. Entonces, la ecuación de congruencia $\congruente{aX}{c}{m}$ tiene soluciones enteras cualquiera sea $c \in \entero{}$
 \end{cor}
 
 \begin{teo}{La ecuación de Congruencia}
- Sean $m \in \natural{}$ y sean $a, c \in \entero{}$ con $a \neq 0$
+ Sean $m \in \nat{}$ y sean $a, c \in \entero{}$ con $a \neq 0$
 
  El conjunto $S$ de soluciones enteras de la ecuación de congruencia
  \[\congruente{aX}{c}{m}\]
@@ -1225,7 +1225,7 @@ Entonces
  \end{teo}
 
 \begin{obs}{Simplificando factores comunes en ec. de congruencia-II}
- Sean $m \in \natural{}$ y $a,c,d \in \entero{}$ con $a,d$ no nulos.
+ Sean $m \in \mathbb{N}$ y $a,c,d \in \entero{}$ con $a,d$ no nulos.
  
  Si $d$ y $m$ son coprimos, entonces se tiene la sigfuiente equivalencia de ecuaciónes de congruencia:
  \begin{center}
@@ -1241,7 +1241,7 @@ Entonces
 
 \begin{propo}{Sistemas Equivalentes}
  \begin{enumerate}
-  \item Sean $m_1, \cdots , m_n \in \natural{}$ coprimos dos a dos, es decir $(m_i : m_j)=1$ para todo $i \neq j$. Entonces, $\forall c \in \entero{}$
+  \item Sean $m_1, \cdots , m_n \in \mathbb{N}$ coprimos dos a dos, es decir $(m_i : m_j)=1$ para todo $i \neq j$. Entonces, $\forall c \in \entero{}$
   \begin{center}
   $\left\lbrace \begin{array}{l}
                 × \congruente{X}{c}{m_1} \\
@@ -1250,7 +1250,7 @@ Entonces
                   \congruente{X}{c}{m_n}
                \end{array}\right.$ $\leftrightsquigarrow$ $\congruente{X}{c}{m_1 \cdot m_2 \cdots m_n}$
   \end{center}
-  \item Sean $m, m' \in \natural{}$ tales que $\divi{m'}{m}$. Entonces, $\forall c, c' \in \entero{}$
+  \item Sean $m, m' \in \mathbb{N}$ tales que $\divi{m'}{m}$. Entonces, $\forall c, c' \in \entero{}$
   \begin{itemize}
    \item Si $c \not\equiv x' \es{0.1}(m')$, $\left\lbrace \begin{array}{l}
                                                            ×\congruente{X}{c'}{m'} \\
@@ -1265,7 +1265,7 @@ Entonces
 \end{propo}
 
 \begin{teo}{Teorema Chino del Resto}
-   Sean $m_1, \cdots , m_n \in \natural{}$ coprimos dos a dos, es decir $(m_i : m_j)=1$ para todo $i \neq j$. Entonces, $\forall c_1, \cdots, c_n \in \entero{}$, el sistema de ecuaciónes de congruencia
+   Sean $m_1, \cdots , m_n \in \mathbb{N}$ coprimos dos a dos, es decir $(m_i : m_j)=1$ para todo $i \neq j$. Entonces, $\forall c_1, \cdots, c_n \in \entero{}$, el sistema de ecuaciónes de congruencia
 \begin{center}
   $\left\lbrace \begin{array}{l}
                 × \congruente{X}{c_1}{m_1} \\
@@ -1304,7 +1304,7 @@ Entonces
 \end{teo}
 
 \begin{cor}{Congruencia y Potencias}
-Sea $p$ un primo positivo. Entonces, $\forall a \in \entero{}$ talque $p \not\vert a$ y $n \in \natural{}$, se tiene
+Sea $p$ un primo positivo. Entonces, $\forall a \in \entero{}$ talque $p \not\vert a$ y $n \in \mathbb{N}$, se tiene
 \[\congruente{n}{r}{p-1} \es{0.2} \implica \es{0.2} \congruente{a^n}{a^r}{p}\]
 En particular, $p \not\vert a$ $\implica$ $\congruente{a^n}{a^{r_{p-1}(n)}}{p}$
 \end{cor}
